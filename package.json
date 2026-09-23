@@ -1,0 +1,49 @@
+{
+  "name": "themoviedb-discovery-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "tsx watch src/back-end/index.ts",
+    "dev:client": "vite",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint -c oxlint.config.ts .",
+    "lint:fix": "oxlint -c oxlint.config.ts --fix .",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexanrvn/themoviedb-discovery-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Alexanrvn/themoviedb-discovery-app/issues"
+  },
+  "homepage": "https://github.com/Alexanrvn/themoviedb-discovery-app#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.5.1",
+    "devmoji": "^2.3.0",
+    "husky": "^9.1.7",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "oxfmt": "^0.3.0",
+    "oxlint": "^0.3.0",
+    "lint-staged": "^15.2.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,html,md,yml,yaml}": "npm run fmt",
+    "*.{js,jsx,ts,tsx}": "npm run lint:fix"
+  }
+}

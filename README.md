@@ -1,1 +1,1 @@
-# tmdb-discovery2
+# themoviehb-discovery-app
